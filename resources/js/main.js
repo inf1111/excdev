@@ -13,6 +13,12 @@ $(document).ready (function () {
                 { name: 'description', searchable: true },
                 { name: 'date' },
             ],
+            columnDefs: [
+                {
+                    targets: 1,
+                    render: $.fn.dataTable.render.number(',', '.', 2, '')
+                }
+            ],
         });
 
     }
